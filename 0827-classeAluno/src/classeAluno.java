@@ -38,7 +38,7 @@ public class classeAluno {
         this.peso = weight;
     }
     
-    public void Idade() {
+    public void setIdade() {
         int anos = anoAtual-anoNascimento;
         this.idade = anos;
     }
@@ -96,7 +96,7 @@ public class classeAluno {
 
     public void Imprimir() {
         DecimalFormat df = new DecimalFormat("0.00");           //Formatação para números decimais
-
+        setIdade();
         System.out.println("Nome: " + nome);
         System.out.println("Idade: " + idade);
         System.out.println("Sexo: " + sexo);
