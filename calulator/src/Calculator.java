@@ -4,6 +4,22 @@ public class Calculator {
     private double n1, n2, result;
     private String op;
 
+    //construtor
+    public Calculator(){
+        op = null;
+        n1 = 0;
+        n2 = 0;
+        result = 0;
+    }
+
+    public Calculator(double n1, double n2, double result, String op){
+        this.op = op;
+        this.n1 = n1;
+        this.n2 = n2;
+        this.result = result;
+    }
+
+
     public void setParamters(double num1, double num2, String operation) {
         this.n1 = num1;
         this.n2 = num2;
