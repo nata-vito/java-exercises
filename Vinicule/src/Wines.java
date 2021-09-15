@@ -1,3 +1,15 @@
+/* 
+        Construa um programa em Java que crie um classe para representar as
+        informações sobre 3 vinhos: 
+        
+        a) nome vinho 
+        b) tipo 
+        c) ano de Fabricação 
+        b) preço 
+
+        A partir disto faça a leitura das informações de 3 vinhos e imprima o 
+        nome do vinho mais caro e do vinho mais velho.
+ */
 import java.util.*;
 
 public class Wines {
