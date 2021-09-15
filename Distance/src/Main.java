@@ -1,3 +1,10 @@
+/* 
+    Construa um programa em Java que calcule a distancia de dois pontos. 
+    Para cada ponto temos as seguintes informações
+    a) posição no eixo X
+    b) posição no eixo Y
+*/
+
 import java.util.*;
 
 public class Main {
