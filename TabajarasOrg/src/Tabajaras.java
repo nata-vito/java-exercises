@@ -98,24 +98,17 @@ public class Tabajaras {
 
         setSalary(salary);
 
-        System.out.println(getSalary());
-
         salary =  (getSubordinates()*20.00) + getSalary();
         setSalary(salary);
-        System.out.println(getSalary());
 
-        
         if(salary <= 1000.00){
-            System.out.println("<");
             salary = salary - (getSalary()*0.03);
         }
         else if(salary > 1000.00){
-            System.out.println(">");
             salary = getSalary() - (getSalary()*0.05);
         }
 
         setSalary(salary);
-        System.out.println(getSalary());
     }
 
     public void sinceYears() {
@@ -129,7 +122,6 @@ public class Tabajaras {
         years = yearActual - getYearIn();
 
         setSince(years);
-        System.out.println(years);
     }
 
     public void printData() {
