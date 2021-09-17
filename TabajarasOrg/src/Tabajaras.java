@@ -1,7 +1,9 @@
+import java.util.*;
+
 public class Tabajaras {
     private String name, department;
     private double salary;
-    private int yearIn, RG, subordinates;
+    private int yearIn, since, RG, subordinates;
     private boolean isWorking;
 
     public Tabajaras(){
@@ -74,25 +76,70 @@ public class Tabajaras {
         this.isWorking = isWorking;
     }
 
+    public int getSince() {
+        return since;
+    }
+
+    public void setSince(int since) {
+        this.since = since;
+    }
+
     public void salaryValue() {
-        double salary;
+        double salary = 0;
+
+        sinceYears();
+
+        if(getSince() < 5){
+            salary = getSalary() + (getSalary()*0.05); 
+        }
+        else if(getSince() > 5){
+            salary = getSalary() + (getSalary()*0.08); 
+        }
+
+        setSalary(salary);
+
+        System.out.println(getSalary());
+
         salary =  (getSubordinates()*20.00) + getSalary();
+        setSalary(salary);
+        System.out.println(getSalary());
+
         
-        if(salary >= 1000.00){
-            salary = salary - (getSalary()*0.3);
-            setSalary(salary);
+        if(salary <= 1000.00){
+            System.out.println("<");
+            salary = salary - (getSalary()*0.03);
         }
-        else if(salary < 1000.00){
-            salary = salary - (getSalary()*0.5);
-            setSalary(salary);
+        else if(salary > 1000.00){
+            System.out.println(">");
+            salary = getSalary() - (getSalary()*0.05);
         }
+
+        setSalary(salary);
+        System.out.println(getSalary());
+    }
+
+    public void sinceYears() {
+        Calendar d = new GregorianCalendar();
+        Date date = new Date();
+        int yearActual, years;
+
+        d.setTime(date);
+
+        yearActual = d.get(Calendar.YEAR);
+        years = yearActual - getYearIn();
+
+        setSince(years);
+        System.out.println(years);
     }
 
     public void printData() {
+
+        salaryValue();
+
         System.out.println("\nName: " + getName() +
                            "\nDepartment: " + getDepartment() + 
                            "\nSalary: " + getSalary() + 
-                           "\nSince: " + getYearIn() +
+                           "\nYears: " + getSince() +
                            "\nRG: " + getRG() + 
                            "\nSubordinates: " + getSubordinates() +
                            "\nIs Working: " + getIsWorking());
