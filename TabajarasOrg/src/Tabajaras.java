@@ -4,6 +4,20 @@ public class Tabajaras {
     private int yearIn, RG, subordinates;
     private boolean isWorking;
 
+    public Tabajaras(){
+
+    }
+
+    public Tabajaras(String name, String department, double salary, int yearIn, int RG, int subordinates, boolean isWorking){
+        setName(name);
+        setDepartment(department);
+        setSalary(salary);
+        setYearIn(yearIn);
+        setRG(RG);
+        setSubordinates(subordinates);
+        setWorking(isWorking);
+    }
+
     public String getName() {
         return name;
     }
@@ -52,7 +66,7 @@ public class Tabajaras {
         this.subordinates = subordinates;
     }
 
-    public boolean isWorking() {
+    public boolean getIsWorking() {
         return isWorking;
     }
     
@@ -60,4 +74,27 @@ public class Tabajaras {
         this.isWorking = isWorking;
     }
 
+    public void salaryValue() {
+        double salary;
+        salary =  (getSubordinates()*20.00) + getSalary();
+        
+        if(salary >= 1000.00){
+            salary = salary - (getSalary()*0.3);
+            setSalary(salary);
+        }
+        else if(salary < 1000.00){
+            salary = salary - (getSalary()*0.5);
+            setSalary(salary);
+        }
+    }
+
+    public void printData() {
+        System.out.println("\nName: " + getName() +
+                           "\nDepartment: " + getDepartment() + 
+                           "\nSalary: " + getSalary() + 
+                           "\nSince: " + getYearIn() +
+                           "\nRG: " + getRG() + 
+                           "\nSubordinates: " + getSubordinates() +
+                           "\nIs Working: " + getIsWorking());
+    }
 }
