@@ -44,7 +44,7 @@ public class App {
         System.out.println("Tamanho da lista: " + l.size());
         l.remove(0); // index
         System.out.println("Tamanho da lista: " + l.size());
-        
+
         // Leitura dos dados do ArrayList
         System.out.println("Pocisão 1: " + l.get(0).getNome());
         l.remove(0); // index
