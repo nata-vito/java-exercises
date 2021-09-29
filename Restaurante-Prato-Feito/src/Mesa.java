@@ -5,7 +5,7 @@ public class Mesa {
     private int numero, qtdPessoas;
     private double totalConta, valorPessoa;
 
-    // Iniciando os parâmetro com valores default
+    // Iniciando os parâmetros com valores default
     public Mesa(){  
         setNumero(0);
         setQtdPessoas(0);
