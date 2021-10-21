@@ -25,6 +25,7 @@ public class Contato {
 		System.out.println("Endereco: " + endereco);
 		System.out.println("E-mail: " + email);
 		System.out.println("Telefone: " + telefone);
+		System.out.println();
 	}
 
 
