@@ -3,6 +3,14 @@ import java.util.*;
 public class Gerenciar {
     private ArrayList <Proprietario> listaProprietarios;
 
+    public ArrayList<Proprietario> getListaProprietarios() {
+        return listaProprietarios;
+    }
+
+    public void setListaProprietarios(ArrayList<Proprietario> listaProprietarios) {
+        this.listaProprietarios = listaProprietarios;
+    }
+
     public Gerenciar(){
         listaProprietarios = new ArrayList<Proprietario>();
     }
@@ -12,10 +20,10 @@ public class Gerenciar {
     }
     
     public String PrintAll() {
-        String info = null;
+        String info = "\n";
 
         for(int i = 0; i < this.listaProprietarios.size(); i++){
-            info += "\nProprietario: " + i + this.listaProprietarios.get(i).imprimir();
+            info += "\nProprietario: " + i + this.listaProprietarios.get(i).imprimir() + "\n----------------------------------------\n";
         } 
         
        
