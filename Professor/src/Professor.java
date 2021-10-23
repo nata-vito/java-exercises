@@ -2,7 +2,6 @@ public class Professor {
     private String nome, titulacao;
     private double chLecionada;
 
-    
     public Professor(String nome, String titulacao, double chLecionada) {
         this.nome = nome;
         this.titulacao = titulacao;
