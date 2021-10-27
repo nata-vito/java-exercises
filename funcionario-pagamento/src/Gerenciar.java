@@ -29,12 +29,13 @@ public class Gerenciar {
 
     public Funcionario Search(String cpf) {
 
+        
         for(Funcionario objFunc: this.listaFuncionarios){
             if(objFunc.getCpf().equalsIgnoreCase(cpf)){
                 return objFunc;
             }
         }
-        
+
         return null;
     }
 }
